@@ -1,0 +1,50 @@
+  
+<htmL>
+    <head>
+      <title><%= title %></title>
+      <script
+        src="https://kit.fontawesome.com/0d6071fdab.js"
+        crossorigin="anonymous"
+      ></script>
+      <link rel="stylesheet" href="/css/home.css" />
+    </head>
+  
+    <body>
+      <div id="wrapperfull">
+        <div id="hedwrapper">
+          <i id="icon" <i class="fas fa-address-book"></i>
+          <h3 id="heading"><%= title %></h3>
+        </div>
+  
+      <div id="licontainer">
+          <ul>
+            <% for(let i of contact_list){%>
+            <li id="li">
+              <p><%= i.name %></p>
+              <p><%= i.phone %></p>
+              <div id="delete">
+                  <a href="/delete-contact/?id=<%= i._id%>&name=<%=i.name%>"><i class="fas fa-trash-alt"></i></a>
+    
+              </div>
+            </li>
+            <%}%>
+          </ul>
+      </div>
+  
+          <form id="form" action="/create-contact" method="POST">
+            <input id="input" type="text" name="name" placeholder="Enter name" required />
+            <input id="input"
+              type="number"
+              name="phone"
+              placeholder="Enter phone"
+              required
+            />
+  
+            <button id="button" type="submit">ADD CONTACT</button>
+          </form>
+     
+  
+        <script src="/js/home.js"></script>
+      </div>
+    </body>
+  </htmL>
