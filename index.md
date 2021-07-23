@@ -1,1 +1,1 @@
-Hey this is my very frist project made using the crud formate 
+Hey this is my very first project made using the crud formate 
