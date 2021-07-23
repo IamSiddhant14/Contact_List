@@ -32,11 +32,18 @@ body{
     height: 50px;
     width: 500px;
     display: flex;
-    justify-content:space-evenly;
+    justify-content:space-between;
     align-items:center;
     margin: 2px;
     border-radius: 10px;
 
+}
+#pwrapper{
+    width: 80%;
+    display: flex;
+    justify-content:space-between;
+
+    
 }
 
 #form{

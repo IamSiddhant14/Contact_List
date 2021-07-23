@@ -20,12 +20,18 @@
           <ul>
             <% for(let i of contact_list){%>
             <li id="li">
-              <p><%= i.name %></p>
-              <p><%= i.phone %></p>
-              <div id="delete">
-                  <a href="/delete-contact/?id=<%= i._id%>&name=<%=i.name%>"><i class="fas fa-trash-alt"></i></a>
-    
-              </div>
+                <div id="pwrapper">
+                    <div id="first">
+                        <p ><%= i.name %></p>
+                    </div>
+                    <div id="second">
+                        <p ><%= i.phone %></p>
+                    </div>
+
+                </div>
+                <div id="delete" >
+                        <a href="/delete-contact/?id=<%= i._id%>&name=<%=i.name%>"><i class="fas fa-trash-alt"></i></a>
+                </div>
             </li>
             <%}%>
           </ul>
