@@ -2,6 +2,7 @@ const express = require('express');
 const port = 8001;
 
 // used for setting up the view engine path
+//Here path is an inbuilt module in the express
 const path = require('path');
 const db = require('./config/mongoose');
 const Contact = require('./models/contact');
@@ -27,6 +28,12 @@ var contactList =[
     {
         name :"didi",
         phone:"7890857434"
+    
+    },
+    
+    {
+        name :"mom",
+        phone:"7890857434"
     }
 ]
 
@@ -34,7 +41,7 @@ var contactList =[
 app.set('view engine','ejs');
 
 //__dirname is the path of the current executing directory
-app.set('views',path.join(__dirname,'viewsS'));
+app.set('views',path.join(__dirname,'./viewsS'));
 
 // MIDDLEWARE
 
